@@ -16,7 +16,7 @@ import com.example.apirest.Models.UsuarioModel;
 import com.example.apirest.Services.UsuarioService;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/")
 @CrossOrigin(origins="*")
 public class UsuarioController {
 
@@ -33,12 +33,12 @@ public class UsuarioController {
         return this.usuarioService.saveUsers(usuario);
     }
 
-    @GetMapping(path="/{id}")
+    @GetMapping(path="/user/{id}")
     public Optional<UsuarioModel> getUserById(@PathVariable("id") Long id){
         return this.usuarioService.getById(id);
     }
 
-    @DeleteMapping(path="/{id}")
+    @DeleteMapping(path="/user/{id}")
     public String deleteById(@PathVariable("id") Long id){
         boolean ok = this.usuarioService.deleteUser(id);
         if(ok){
