@@ -1,1 +1,1 @@
-web: java -jar -Dserver.port=$PORT target/apirest-0.0.1-SNAPSHOT.jar.jar
+web: java -jar -Dserver.port=$PORT target/apirest-0.0.1-SNAPSHOT.jar
